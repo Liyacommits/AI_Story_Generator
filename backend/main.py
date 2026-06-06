@@ -1,6 +1,10 @@
-def main():
-    print("Hello from backend!")
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-
-if __name__ == "__main__":
-    main()
+app = FastAPI(
+    title= "Choose your own adventure API",
+    description= "An API for a choose your own adventure game",
+    version="0.1.0",
+    docs_url="/docs",
+    recdocs_url="/redoc",
+)
